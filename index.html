@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To My Favourite Human ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Caveat', cursive;
+  background: linear-gradient(135deg, #fff0f5, #fbdce8, #fff7fa);
+  color: #75465a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  overflow-x: hidden;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  color: #e99ab7;
+  opacity: .55;
+  animation: float 10s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes float {
+  from { transform: translateY(0) rotate(0deg); }
+  to { transform: translateY(-110vh) rotate(360deg); }
+}
+
+.container {
+  width: 100%;
+  max-width: 540px;
+  background: rgba(255,255,255,.91);
+  padding: 28px 22px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 12px 35px #d99bb533;
+  border: 1px solid #f8d5e2;
+  position: relative;
+  z-index: 1;
+}
+
+.progress {
+  width: 100%;
+  height: 7px;
+  background: #f8e0e9;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+#progressBar {
+  width: 11.11%;
+  height: 100%;
+  background: #d879a0;
+  transition: .4s;
+}
+
+.section {
+  display: none;
+  animation: appear .5s ease;
+}
+
+.section.active {
+  display: block;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  color: #bd6488;
+  font-size: 43px;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+h2 {
+  color: #bd6488;
+  font-size: 35px;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 25px;
+  line-height: 1.35;
+  margin: 13px 0;
+}
+
+.small {
+  font-size: 19px;
+  color: #a77b8d;
+}
+
+.emoji {
+  font-size: 48px;
+  margin: 15px;
+}
+
+button {
+  font-family: 'Caveat', cursive;
+  border: none;
+  background: #d879a0;
+  color: white;
+  padding: 10px 23px;
+  border-radius: 30px;
+  font-size: 23px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 8px 4px;
+  transition: .2s;
+}
+
+button:hover {
+  background: #bd6488;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.nav {
+  margin-top: 25px;
+  border-top: 1px solid #f5dce6;
+  padding-top: 15px;
+}
+
+input {
+  font-family: 'Caveat', cursive;
+  width: 85%;
+  padding: 9px 12px;
+  border: 1px solid #e8b6ca;
+  border-radius: 20px;
+  text-align: center;
+  outline: none;
+  font-size: 23px;
+  margin: 12px 0;
+  color: #75465a;
+}
+
+.letter {
+  background: #fff3f7;
+  border-radius: 15px;
+  padding: 18px;
+  text-align: left;
+  font-size: 23px;
+  line-height: 1.45;
+  margin-top: 15px;
+  border: 1px dashed #e9b5ca;
+}
+
+.secret {
+  display: none;
+}
+
+.secret.show {
+  display: block;
+  animation: appear .7s ease;
+}
+
+.big {
+  font-size: 43px;
+  font-weight: bold;
+  color: #d45d91;
+  margin: 20px 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #f3d6e2;
+  margin: 20px 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="progress">
+  <div id="progressBar"></div>
+</div>
+
+<!-- SECTION 1 -->
+<div class="section active">
+  <div class="emoji">🎀</div>
+  <h1>To My Favourite Human ♡</h1>
+  <p>Hey you!</p>
+  <p>Someone has made a little corner of the internet just for you.</p>
+  <p>A little place filled with memories, smiles, surprises and a few secrets.</p>
+  <p class="small">Made with love, just for you.</p>
+  <div class="emoji">🌷</div>
+  <p>31 October 2026</p>
+  <button onclick="go(1)">Begin Our Journey ♡</button>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section">
+  <div class="emoji">💌</div>
+  <h2>How It All Started</h2>
+  <p>Funny how a simple Instagram message can turn into something so meaningful.</p>
+  <p>We met through Instagram, and guess what?</p>
+  <p>I was the one who sent the first message! 😂</p>
+  <p>Back then, I had no idea that one little conversation would become such a beautiful part of my life.</p>
+  <p>Sometimes, the smallest beginnings create the sweetest stories. ♡</p>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section">
+  <div class="emoji">🌍</div>
+  <h2>Our Little World</h2>
+  <p>Different places, different routines, but somehow we created our own little world.</p>
+  <p>Our conversations, random jokes, silly moments and all those little things...</p>
+  <p>They mean more than you probably know.</p>
+  <p><b>FRIEND + SHIP = ?</b></p>
+  <p>Hint: Sometimes two little words create one beautiful bond. ♡</p>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section">
+  <div class="emoji">🥟</div>
+  <h2>Momo Corner!</h2>
+  <p>Okay, let's talk about something important...</p>
+  <p>Someone here LOVES momo! 😂</p>
+  <p>So I made a special little momo corner just for you.</p>
+  <button onclick="momoSurprise()">Give Me Momo! 🥟</button>
+  <p id="momoMessage"></p>
+</div>
+
+<!-- SECTION 5 -->
+<div class="section">
+  <div class="emoji">🎶</div>
+  <h2>Your Voice, Your Magic</h2>
+  <p>You know what?</p>
+  <p>Your singing is one of those little things that makes you special.</p>
+  <p>Never stop singing, never stop enjoying the things you love.</p>
+  <p>The world deserves to hear your beautiful voice. ♡</p>
+  <div class="emoji">🎤✨</div>
+</div>
+
+<!-- SECTION 6 -->
+<div class="section">
+  <div class="emoji">💗</div>
+  <h2>A Letter For You</h2>
+  <div class="letter">
+    Dear Favourite Human,<br><br>
+    I don't know if I say this often enough, but I'm genuinely glad that we became friends.<br><br>
+    Even though we haven't met in person yet, our friendship has become something I truly appreciate.<br><br>
+    Thank you for every conversation, every laugh and every little moment that made an ordinary day better.<br><br>
+    You are a wonderful person, and I hope you never forget that.<br><br>
+    With lots of appreciation,<br>
+    Your friend ♡
+  </div>
+</div>
+
+<!-- SECTION 7 -->
+<div class="section">
+  <div class="emoji">🕵️‍♀️</div>
+  <h2>The Secret Mission</h2>
+  <p>Welcome, detective! 😂</p>
+  <p>Three little puzzles are waiting for you. Solve them to continue!</p>
+
+  <hr>
+
+  <p><b>PUZZLE 1</b></p>
+  <p>What date is written on the first page?</p>
+  <input id="answer1" placeholder="Enter the date">
+  <br>
+  <button onclick="check(1)">Check Answer</button>
+  <button onclick="hint(1)">Need a Hint?</button>
+  <p id="feedback1"></p>
+  <p id="hint1"></p>
+
+  <hr>
+
+  <p><b>PUZZLE 2</b></p>
+  <p>FRIEND + SHIP = ?</p>
+  <input id="answer2" placeholder="Your answer">
+  <br>
+  <button onclick="check(2)">Check Answer</button>
+  <button onclick="hint(2)">Need a Hint?</button>
+  <p id="feedback2"></p>
+  <p id="hint2"></p>
+
+  <hr>
+
+  <p><b>PUZZLE 3</b></p>
+  <p>What's her favourite food?</p>
+  <input id="answer3" placeholder="Your answer">
+  <br>
+  <button onclick="check(3)">Check Answer</button>
+  <button onclick="hint(3)">Need a Hint?</button>
+  <p id="feedback3"></p>
+  <p id="hint3"></p>
+
+  <p id="allSolved"></p>
+</div>
+
+<!-- SECTION 8 -->
+<div class="section">
+  <div class="emoji">🌙</div>
+  <h2>A Promise For Tomorrow</h2>
+  <p>Distance may keep us in different places, but it doesn't make a meaningful friendship any less special.</p>
+  <p>I hope we keep making memories, sharing stories and laughing at the most random things.</p>
+  <p>And someday, hopefully, we'll finally meet in person.</p>
+  <p>Until that day, let's keep this little friendship growing.</p>
+  <p><b>Some people are worth keeping in your life. ♡</b></p>
+</div>
+
+<!-- SECTION 9 -->
+<div class="section">
+  <div class="emoji">👀</div>
+  <h2>The Final Secret</h2>
+  <p>You've made it all the way here!</p>
+  <p>There's one thing I've been wanting to tell you...</p>
+  <p>Are you ready for the truth?</p>
+  <button onclick="revealSecret()">I'M READY FOR THE TRUTH 👀</button>
+
+  <div id="secretMessage" class="secret">
+    <div class="big">I CAN SPEAK! 😭❤️</div>
+    <div class="letter">
+      Okay... there's something I've been wanting to tell you. ❤️<br><br>
+
+      Do you remember when I told you that I couldn't speak?<br><br>
+
+      And do you remember what you said?<br><br>
+
+      You said you would learn sign language so that we could still communicate with each other.<br><br>
+
+      I don't think you realize how much that moment meant to me.<br><br>
+
+      You were willing to learn an entirely new language just to make sure we could understand each other. You didn't make me feel different, you didn't make me feel left out. Instead, you were ready to make an effort just to stay connected with me.<br><br>
+
+      And honestly, that touched my heart more than I could ever explain.<br><br>
+
+      But there's something I need to confess...<br><br>
+
+      <b>I CAN SPEAK.</b> 😭❤️<br><br>
+
+      Yes... I know. I can already imagine your reaction right now! 😂<br><br>
+
+      I'm truly sorry for not telling you the truth earlier. I never wanted to make you feel that your kindness was something to laugh about. In fact, it made me realize how lucky I am to have a friend like you.<br><br>
+
+      You were ready to learn a whole new way of communicating just for me, while I didn't even realize how much that little gesture would mean.<br><br>
+
+      Thank you for being so thoughtful, patient and kind.<br><br>
+
+      And please, don't ever think that your willingness to learn sign language was wasted. It showed me something beautiful about you — that you genuinely care about the people who matter to you.<br><br>
+
+      We haven't met in person yet, but moments like this remind me that a meaningful connection doesn't always need physical presence.<br><br>
+
+      One day, I hope we'll meet, laugh about this together, and remember this little confession as one of the funniest stories of our friendship.<br><br>
+
+      Until then, please stay the same kind-hearted person you've always been.<br><br>
+
+      I'm sorry for the little lie, but I'll always be grateful for the beautiful friendship behind it.<br><br>
+
+      <b>You didn't need to learn a new language to reach me. Your kindness had already reached my heart. ♡</b>
+    </div>
+  </div>
+</div>
+
+<div class="nav">
+  <button id="backBtn" onclick="go(current-1)">← Back</button>
+  <span id="pageNumber" class="small">1 / 9</span>
+  <button id="nextBtn" onclick="go(current+1)">Next →</button>
+</div>
+
+</div>
+
+<script>
+let current = 0;
+const sections = document.querySelectorAll(".section");
+
+function go(number) {
+  if (number < 0 || number >= sections.length) return;
+
+  if (current === 6 && number === 7 &&
+      !(solved[1] && solved[2] && solved[3])) {
+    document.getElementById("allSolved").textContent =
+      "Solve all three puzzles first, detective! 🕵️‍♀️";
+    return;
+  }
+
+  sections[current].classList.remove("active");
+  current = number;
+  sections[current].classList.add("active");
+
+  document.getElementById("backBtn").style.display =
+    current === 0 ? "none" : "inline-block";
+
+  document.getElementById("nextBtn").style.display =
+    current === sections.length - 1 ? "none" : "inline-block";
+
+  document.getElementById("pageNumber").textContent =
+    (current + 1) + " / " + sections.length;
+
+  document.getElementById("progressBar").style.width =
+    ((current + 1) / sections.length * 100) + "%";
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+document.getElementById("backBtn").style.display = "none";
+
+function momoSurprise() {
+  document.getElementById("momoMessage").innerHTML =
+    "🥟 One plate of virtual momo, specially delivered for you! 😂❤️";
+}
+
+function revealSecret() {
+  document.getElementById("secretMessage").classList.add("show");
+}
+
+let hintCount = [0, 0, 0, 0];
+let solved = [false, false, false, false];
+
+const hints = {
+  1: [
+    "Look at the first page carefully.",
+    "It's the date written below the title.",
+    "The date is in the first section.",
+    "Go back to Section 1, detective! 😂"
+  ],
+  2: [
+    "Think about two words.",
+    "FRIEND and SHIP.",
+    "Put the two words together.",
+    "The answer is FRIENDSHIP! 😂"
+  ],
+  3: [
+    "Think about her favourite food.",
+    "It's a popular Nepali snack.",
+    "You'll find it in the Momo Corner.",
+    "The answer is MOMO! 🥟"
+  ]
+};
+
+function hint(number) {
+  if (solved[number]) {
+    document.getElementById("hint" + number).textContent =
+      "You've already solved this one! 🎉";
+    return;
+  }
+
+  let index = Math.min(hintCount[number], 3);
+
+  document.getElementById("hint" + number).textContent =
+    "Hint " + (index + 1) + ": " + hints[number][index];
+
+  hintCount[number]++;
+}
+
+function check(number) {
+  let answer = document.getElementById("answer" + number)
+    .value.trim().toLowerCase();
+
+  let correct = {
+    1: ["31 october 2026", "october 31 2026", "31/10/2026", "31-10-2026"],
+    2: ["friendship"],
+    3: ["momo", "momos"]
+  };
+
+  if (correct[number].includes(answer)) {
+    solved[number] = true;
+
+    document.getElementById("feedback" + number).textContent =
+      "Correct! You're a brilliant detective! 🎉❤️";
+
+    document.getElementById("answer" + number).disabled = true;
+
+    if (solved[1] && solved[2] && solved[3]) {
+      document.getElementById("allSolved").innerHTML =
+        "<br><b>ALL PUZZLES SOLVED! 🎊</b><br>Now press Next to continue!";
+    }
+  } else {
+    document.getElementById("feedback" + number).textContent =
+      "Not quite! Try again, detective. 😜";
+  }
+}
+
+// Floating hearts
+for (let i = 0; i < 12; i++) {
+  let heart = document.createElement("div");
+  heart.className = "heart";
+  heart.textContent = "♡";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDelay = Math.random() * 8 + "s";
+  heart.style.fontSize = (15 + Math.random() * 20) + "px";
+  document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
